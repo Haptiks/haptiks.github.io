@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>What-A-Save</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        
+        :root{
+            --primary: rgb(0, 225, 255);
+            --accent: rgb(17, 0, 255);
+            --background: rgb(0, 82, 169);
+        }
+
+        body{
+            background-color: var(--background);
+            animation: loop-back 10s linear infinite;
+            margin-top: 400px;
+        }
+
+        h1{
+            font-size: 40pt;
+            text-align: center;
+            font-family: 'Roboto Mono';
+            font-weight: 900;
+            color: var(--accent);
+            position: relative;
+            top: 37px;
+        }
+        .w2{
+            position: absolute;
+            top: 0;
+            text-align: center;
+            font-family: 'Roboto Mono';
+            font-weight: 900;
+            color: var(--primary);
+            left: 100px;
+        }
+        .w3{
+            position: relative;
+            top: 400px;
+            font-size: 40pt;
+            text-align: center;
+            font-family: 'Roboto Mono';
+            font-weight: 900;
+            color: var(--accent);
+            margin-left: -816px;
+        }
+        .w4{
+            position: absolute;
+            top: 399px;
+            text-align: center;
+            font-family: 'Roboto Mono';
+            font-weight: 900;
+            color: var(--primary);
+            left: 100px;
+            margin-left: -400px;
+        }
+        .animated-body{
+            position: relative;
+            top: 7px;
+            animation: scroll 4s linear infinite;
+        }
+        .animated-body2{
+            position: absolute;
+            animation: scroll 4s linear infinite;
+            width: 100%;
+            top: 0;
+            margin-left: 800px;
+            margin-top: 8px;
+        }
+        @keyframes scroll{
+            0%{
+                left: 0;
+            }
+            100%{
+                left: -393px;
+            }
+        }
+        @keyframes loop-back{
+            0%{
+                background-color: red;
+            }
+            12%{
+                background-color: rgb(255, 179, 0);
+            }
+            25%{
+                background-color: rgb(123, 255, 0);
+            }
+            40%{
+                background-color: rgb(0, 247, 255);
+            }
+            55%{
+                background-color: rgb(0, 8, 255);
+            }
+            70%{
+                background-color: rgb(179, 0, 255);
+            }
+            85%{
+                background-color: rgb(255, 0, 230);
+            }
+            100%{
+                background-color: rgb(255, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-body">
+        <h1>WHAT A SAVE!</h1>
+        <h1 class="w2">WHAT A SAVE!</h1>
+    </div>
+    <div class="animated-body2">
+        <h1 class="w3">WHAT A SAVE!</h1>
+        <h1 class="w4">WHAT A SAVE!</h1>
+    </div>
+</body>
+</html>

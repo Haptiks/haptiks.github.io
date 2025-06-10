@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+
+cover{
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-background);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-out-zap 320ms 4s ease-in-out forwards;
+    z-index: 99;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+cover div{
+    border: 1px solid rgb(115, 0, 255);
+    background-color: rgb(0, 174, 255);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    animation: circle-in 3s ease-in-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+cover div .zap-logo::after{
+    content: '';
+    opacity: 0;
+    animation: slide-up 4s 1s forwards;
+    border: none;
+    background-image: url('images/ZAP_Haptics.png');
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    max-width: 70%;
+    max-height: 70%;
+    top: -300px;
+}
+.haptiks-body{
+    position: relative;
+        top: 100px;
+        width: 100vw;
+        z-index: -1;
+}
+
+.haptiks-body .flex-cont{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.flex-cont .content-card a{
+    background-color: rgb(146, 96, 255);
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 40px;
+    font-weight: 900;
+    transition: 130ms ease-in;
+}
+
+.content-card a:hover{
+    background-color: white;
+    color: black;
+}
+
+.let-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.let-us img{
+    background-color: rgb(136, 54, 195);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+#how-it-works{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    gap: 50px;
+    flex-direction: column;
+}
+
+#how-it-works h1{
+    text-align: center;
+}
+
+#how-it-works .content-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 600;
+    gap: 20px;
+}
+
+.giffy{
+    border-radius: 10px;
+}
+
+#why-us{
+    display: flex;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    margin-top: 50px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#why-us .content-card{
+    background-image: linear-gradient(to right, black, rgb(42, 42, 42));
+    border-radius: 20px;
+    color: white;
+}
+
+.let-us .link{
+    background-image: url('images/browse_activity_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png');
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+}
+
+.hiw-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgb(189, 74, 255), rgb(207, 0, 207));
+    padding: 40px 20px;
+    color: white;
+    font-family: Poppins;
+}
+
+.hiw-flex .content2{
+    max-width: 800px;
+    text-align: center;
+}
+
+#why-us .content-card{
+    padding: 50px;
+}
+
+.list1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.list1 div{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.list1 div div{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#number-tag1{
+    background-color: rgb(181, 85, 255);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 14pt;
+    font-family: Poppins;
+}
+
+#done-for-you{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#done-for-you .content-card{
+    background-image: linear-gradient(to right, rgb(0, 255, 238), rgb(167, 202, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    padding: 50px;
+}
+
+#done-for-you .content-card::after{
+    content:'';
+    position: absolute;
+}
+
+#done-for-you .content-card .content1 h1{
+    text-align: center;
+    font-size: 24pt;
+    color: black;
+    margin-bottom: 50px;
+}
+
+#done-for-you .content-card .content2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#done-for-you .content-card .content2 div{
+    display: flex;
+    flex-direction: row;
+    font-family: Poppins;
+    align-items: center;
+}
+
+#number-tag2{
+    background-color: rgb(225, 255, 56);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 14pt;
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+@media(max-width: 1127px){ /*Mobile View*/
+    .haptiks-body{
+    }
+    .flex-cont{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-flex{
+        width: 90%;
+        height: 400px;
+        background-image: url('images/top-shelf-gif.gif');
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+    .flex-cont .content-card{
+        margin: 20px 50px 20px 40px;
+        background-image: linear-gradient(to right, rgb(157, 203, 255), rgb(54, 255, 211));
+        width: 70%;
+        text-align: center;
+        border-radius: 20px;
+        padding: 10px 30px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .hiw-flex .content-card{
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+    .giffy{
+        max-width: 70%
+    }
+    #why-us{
+        flex-direction: column;
+    }
+    #why-us .content-card{
+        width: 90%;
+    }
+    #why-us .content-card .content1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 50px;
+    }
+    #why-us .content-card .content1 img{
+        width: 50px;
+        height: 50px;
+    }
+    #why-us .content-card .content1 h1{
+        color: rgb(175, 109, 255);
+        font-size: 24pt;
+        margin-bottom: 100px;
+    }
+    #why-us .content-card .content2{
+        font-family: Poppins;
+    }
+    .list1{
+        flex-direction: column;
+    }
+    #done-for-you .content-card{
+        width: 100%;
+    }
+}
+
+@media(min-width: 1127px){ /*Desktop View*/
+    .haptiks-body{
+        min-height: 100vh;
+    }
+    .haptiks-body .flex-cont{
+        width: 90%;
+        justify-self: center;
+        align-self: center;
+    }
+    .flex-cont .content-card{
+        margin: 20px 40px 20px 20px;
+        background-image: linear-gradient(to right, rgb(157, 203, 255), rgb(54, 255, 211));
+        width: 50%;
+        text-align: center;
+        border-radius: 20px;
+        padding: 10px 30px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .haptiks-body .image-flex{
+        width: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        background-image: url('images/top-shelf-gif.gif');
+        border-radius: 20px;
+    }
+    .hiw-flex .content-card{
+        flex-direction: row;
+        max-width: 800px;
+    }
+    #why-us{
+        flex-direction: row;
+    }
+    #why-us .content-card{
+        max-width: 800px;
+    }
+    #why-us .content-card .content1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 50px;
+    }
+    #why-us .content-card .content1 img{
+        width: 50px;
+        height: 50px;
+    }
+    #why-us .content-card .content1 h1{
+        color: rgb(175, 109, 255);
+        font-size: 24pt;
+        margin-bottom: 100px;
+    }
+    #why-us .content-card .content2{
+        font-family: Poppins;
+    }
+    .list1{
+        flex-direction: column;
+    }
+    #done-for-you .content-card{
+        max-width: 625px;
+    }
+}

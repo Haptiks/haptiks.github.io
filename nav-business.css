@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --primary-text: black;
+    --primary-background: rgb(255, 246, 235);
+    --accent-color: rgb(76, 195, 255);
+    --secondary-background: rgb(150, 150, 150);
+    --address-form: '1234 N Address Ave City, State 88888';
+    --email-form: 'yourcontactaddress@example.com';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Roboto Mono', 'Poppins', sans-serif;
+    color: var(--primary-text);
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--primary-background);
+    overflow-y: hidden;
+    animation: overflow-scroll 0.1s 4s forwards;
+    position: relative;
+    z-index: -2;
+}
+
+.body-content{
+    position: relative;
+    z-index: -1;
+    top: 50px;
+}
+
+nav{
+    background-color: var(--primary-background);
+}
+
+.nav-wrapper .buttons a{
+    display: flex;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    color: var(--primary-text);
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.nav-wrapper .buttons a:hover{
+    transition: 220ms ease-in background-color;
+    background-color: var(--accent-color);
+}
+
+#sidebar-active{
+    display: none;
+}
+
+
+@keyframes slide-up{
+    0%{
+        opacity: 0;
+        margin-top: 200px;
+    }
+    25%{
+        opacity: 100%;
+        margin-top: 0;
+    }
+    75%{
+        opacity: 100%;
+        margin-top: 0;
+    }
+}
+
+@keyframes circle-in{
+    0%{
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+    }
+    49%{
+        border-radius: 20%;
+    }
+    50%{
+        width: 10000px;
+        height: 10000px;
+        border-radius: 0%;
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out-zap{
+    0%{
+        opacity: 100%;
+    }
+    99%{
+        display: flex;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        z-index: -999;
+    }
+}
+
+@keyframes overflow-scroll{
+    0%{
+        overflow-y: hidden;
+    }
+    99%{
+        overflow-y: hidden;
+    }
+    100%{
+        overflow-y: scroll;
+    }
+}
+
+@keyframes fade-in-40{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 40%;
+    }
+}
+@keyframes fade-out-40{
+    0%{
+        opacity: 40%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media(min-width: 1127px){ /*Desktop View*/
+    nav{
+        position: fixed;
+        background-color: var(--primary-background);
+        border-radius: 20px;
+        margin-left: 20px;
+    }
+    
+    nav .nav-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    
+    .nav-wrapper .open-sidebar{
+        display: none;
+    }
+    
+    .nav-wrapper .close-sidebar{
+        display: none;
+    }
+    
+    .nav-wrapper .buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo-bar{
+        background-image: url('images/ZAP--Haptics.png');
+        width: 100px;
+        height: 50px;
+        position: relative;
+        object-fit: cover;
+        background-size: 90%;
+        background-repeat: no-repeat;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        top: 17px;
+    }
+}
+
+@media(max-width: 1127px){ /*Mobile View*/
+    nav{
+        display: flex;
+        flex-direction: flex-end;
+        position: fixed;
+        width: 100%;
+    }
+    
+    nav .nav-wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav-wrapper .buttons{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        z-index: 8;
+        text-align: center;
+    }
+    .nav-wrapper .buttons a{
+        animation: fade-in 320ms 0.3s forwards;
+        opacity: 0;
+    }
+    .nav-wrapper .open-sidebar{
+        position: relative;
+        padding: 0 20px;
+    }
+    .nav-wrapper .close-sidebar{
+        position: relative;
+        z-index: 9;
+        display: inline-block;
+    }
+    .logo-bar{
+        background-image: url('images/ZAP--Haptics.png');
+        width: 100px;
+        height: 50px;
+        object-fit: cover;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .nav-out{
+        position: fixed;
+        z-index: 7;
+        display: none;
+        background-color: black;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: 320ms ease-in-out;
+    }
+    #sidebar-active:checked ~ .buttons{
+        display: flex;
+        animation: nav-open 320ms ease-in-out forwards;
+    }
+    #sidebar-active:checked ~ .nav-out{
+        display: flex;
+        animation: fade-in-40 320ms forwards;
+    }
+}
+
+@keyframes nav-open{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 400px;
+    }
+}
+
+@keyframes slide-left{
+    0%{
+        opacity: 0;
+        left: 200px;
+    }
+    100%{
+        left: 0;
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-right{
+    0%{
+        opacity: 0;
+        left: -200px;
+    }
+    100%{
+        left: 0;
+        opacity: 100%;
+    }
+}
+
+.splash-page{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+}
+.splash-1{
+    height: 50%;
+    font-size: 18pt;
+    text-align: center;
+    animation: slide-left 320ms 5s forwards;
+    opacity: 0;
+    position: relative;
+    text-shadow: 4px 4px 2px rgb(195, 195, 195);
+}
+.splash-2{
+    background-image: linear-gradient(to right, rgb(0, 204, 255), rgb(175, 255, 255));
+    animation: slide-right 320ms 5s forwards;
+    opacity: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.splash-2 h2{
+    display: flex;
+    color: white;
+    max-width: 700px;
+    margin: 20px;
+}
+.splash-2 div{
+    border-radius: 10px;
+    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 20px;
+}
+#content-card{
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#how-it-works{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.hiwa{
+    text-align: center;
+}
+
+.hiwb{
+    background-image: linear-gradient(to right, rgb(255, 116, 255), rgb(121, 43, 255));
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-weight: 600;
+    color: white;
+    display: flex;
+}
+
+#scrollable{
+    opacity: 0;
+}
+
+#scrollable{
+    animation: slide-right 320ms 5.4s forwards;
+}

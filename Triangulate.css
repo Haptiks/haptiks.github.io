@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+:root{
+    --color-primary: rgb(239, 255, 239);
+    --color-secondary: rgb(255, 244, 221);
+    --color-accent: red;
+    --text-primary: black;
+    --text-secondary: white;
+    --address-form: '1234 N Address Ave City, State 88888';
+    --email-form: 'yourcontactaddress@example.com';
+    --map-color: rgb(209, 209, 209);
+    --primary-font: Poppins, sans-serif;
+    --flap-1: rgb(95, 255, 81);
+    --flap-2: rgb(0, 128, 21);
+    --flap-3: var(--color-primary);
+    --glass-1: 'Glass-1';
+    --glass-2: 'Glass-2';
+    --glass-3: 'Glass-3';
+    --glass-4: 'Glass-4';
+    --glass-5: 'Glass-5';
+    --glass-6: 'Glass-6';
+    --vape-1: 'Vape-1';
+    --vape-2: 'Vape-2';
+    --vape-3: 'Vape-3';
+    --vape-4: 'Vape-4';
+    --vape-5: 'Vape-5';
+    --vape-6: 'Vape-6';
+    --item-1: url('images/glassware/glass-1.png');
+    --item-2: url('images/glassware/glass-2.png');
+    --item-3: url('images/glassware/glass-3.png');
+    --item-4: url('images/glassware/glass-4.png');
+    --item-5: url('images/glassware/glass-5.png');
+    --item-6: url('images/glassware/glass-6.png');
+    --item-7: url('images/vapeware/vape-1.png');
+    --item-8: url('images/vapeware/vape-2.jpg');
+    --item-9: url('images/vapeware/vape-3.png');
+    --item-10: url('images/vapeware/vape-4.png');
+    --item-11: url('images/vapeware/vape-5.png');
+    --item-12: url('images/vapeware/vape-6.png');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html{
+    font-family: var(--primary-font);
+    color: var(--text-primary);
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    position: relative;
+    z-index: -2;
+}
+
+.splash{
+    width: 100%;
+    height: var(--splash-height);
+    animation: shrink-splash 1.3s ease-out forwards;
+    background-image: url('smoke-2.avif');
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: hidden;
+}
+
+.splash-content{
+    width: 100%;
+    height: var(--splash-height);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+    animation: shrink-splash 1.3s ease-out forwards;
+    overflow-y: hidden;
+}
+
+.splash-gradient{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: radial-gradient(black 0%, transparent 59%);
+    animation: fade-in 1s 1.4s forwards;
+    opacity: 0;
+    overflow-y: hidden;
+}
+
+.splash-content h1{
+    font-size: 32pt;
+    color: white;
+    margin-top: 50px;
+    opacity: 0;
+    animation: slide-top 520ms 1.2s ease-in-out forwards;
+}
+
+.splash-content a{
+    font-size: 18pt;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(61, 61, 61);
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px 20px;
+    opacity: 0;
+    animation: slide-top 520ms 1.4s ease-in-out forwards;
+    margin: 0 12px;
+}
+
+.splash-content a:hover{
+    background-color: black;
+}
+
+#address-form::before{
+    content: var(--address-form);
+}
+
+#email-form::before{
+    content: var(--email-form);
+}
+
+.splash-screen{
+    content: '';
+    width: 100%;
+    height: var(--splash-height);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#left-flap, #right-flap{
+    width: 100%;
+    height: var(--splash-height);
+    position: absolute;
+    z-index: 9;
+}
+
+#left-flap{
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+#right-flap{
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.left-flap1{
+    background-color: var(--flap-1);
+    z-index: 6;
+    animation: slide-downleft 1.4s 280ms ease-in-out forwards;
+}
+
+.right-flap1{
+    background-color: var(--flap-1);
+    z-index: 6;
+    animation: slide-upright 1.4s 280ms ease-in-out forwards;
+}
+
+.left-flap2{
+    background-color: var(--flap-2);
+    animation: slide-downleft 1.4s 140ms ease-in-out forwards;
+    z-index: 7;
+}
+
+.right-flap2{
+    background-color: var(--flap-2);
+    z-index: 7;
+    animation: slide-upright 1.4s 140ms ease-in-out forwards;
+}
+
+.left-flap3{
+    background-color: var(--flap-3);
+    z-index: 8;
+    animation: slide-downleft 1.4s ease-in-out forwards;
+}
+
+.right-flap3{
+    background-color: var(--flap-3);
+    z-index: 8;
+    animation: slide-upright 1.4s ease-in-out forwards;
+}
+
+.body-content{
+    display: flex;
+    background-color: var(--color-primary);
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.top-hardware h1, .top-vapes h1{
+    opacity: 0; 
+    animation: slide-top 660ms 2s ease-in-out forwards;
+    text-align: center;
+    position: relative;
+    z-index: 101;
+    line-height: 24pt;
+    padding: 50px 0;
+    overflow-y: hidden;
+}
+
+.top-hardware, .top-vapes{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.top-hardware{
+    background-color: var(--color-primary);
+}
+
+.top-vapes{
+    background-color: var(--color-secondary);
+}
+
+.top-hardware .hardware-content, .top-vapes .vapes-content{
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#clickable-pop{
+    width: 125px;
+    height: 200px;
+    position: relative;
+    z-index: 99;
+    transition: 120ms ease-in-out;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#clickable-pop:hover{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+.popup-content{
+    width: 0;
+    min-height: 200px;
+    height: 0;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    inset: 0;
+    margin: 0 auto;
+    top: 100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    z-index: -99;
+    border-radius: 13px;
+    border: 2px solid green;
+}
+
+.popup-content:popover-open{
+    z-index: 999;
+    display: flex;
+    width: 70%;
+    height: 50%;
+    transition: width 320ms ease-in-out, height 320ms ease-in-out;
+}
+
+
+.popup-content.\:popover-open{
+    z-index: 999;
+    display: flex;
+    width: 70%;
+    height: 50%;
+    transition: width 320ms ease-in-out, height 320ms ease-in-out;
+}
+
+.popup-content .cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    padding: 5px;
+}
+
+.image1{
+    background-image: var(--item-1);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image2{
+    background-image: var(--item-2);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image3{
+    background-image: var(--item-3);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image4{
+    background-image: var(--item-4);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image5{
+    background-image: var(--item-5);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image6{
+    background-image: var(--item-6);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image7{
+    background-image: var(--item-7);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image8{
+    background-image: var(--item-8);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image9{
+    background-image: var(--item-9);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image10{
+    background-image: var(--item-10);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image11{
+    background-image: var(--item-11);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.image12{
+    background-image: var(--item-12);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+#popup-item1 .cont h2::before{
+    content: var(--glass-1);
+}
+
+#popup-item2 .cont h2::before{
+    content: var(--glass-2);
+}
+
+#popup-item3 .cont h2::before{
+    content: var(--glass-3);
+}
+
+#popup-item4 .cont h2::before{
+    content: var(--glass-4);
+}
+
+#popup-item5 .cont h2::before{
+    content: var(--glass-5);
+}
+
+#popup-item6 .cont h2::before{
+    content: var(--glass-6);
+}
+
+#popup-item7 .cont h2::before{
+    content: var(--vape-1);
+}
+
+#popup-item8 .cont h2::before{
+    content: var(--vape-2);
+}
+
+#popup-item9 .cont h2::before{
+    content: var(--vape-3);
+}
+
+#popup-item10 .cont h2::before{
+    content: var(--vape-4);
+}
+
+#popup-item11 .cont h2::before{
+    content: var(--vape-5);
+}
+
+#popup-item12 .cont h2::before{
+    content: var(--vape-6);
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primarys);
+    padding-bottom: 100px;
+}
+
+.location-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.location-wrapper h3{
+    padding-bottom: 50px;
+}
+
+iframe{
+    border-radius: 20px;
+    width: 90%;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 34, 14);
+    color: white;
+    padding: 50px 50px 100px 50px;
+}
+
+#at-symbol{
+    font-weight: 900;
+    font-size: 72pt;
+    text-align: center;
+}
+
+.contact-wrapper div{
+    display: inline-block;
+}
+
+.contact-wrapper div a{
+    color: white;
+}
+
+
+nav{
+    background-color: var(--color-primary);
+    position: absolute;
+    z-index: 999;
+}
+
+.nav-wrapper .buttons a{
+    display: flex;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    color: var(--text-primary);
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.nav-wrapper .buttons a:hover{
+    transition: 220ms ease-in background-color;
+    background-color: var(--color-accent);
+}
+
+#sidebar-active{
+    display: none;
+}
+
+@media(min-width: 1127px){ /*Desktop View*/
+    .splash{
+        background-size: 100%;
+    }
+    .top-hardware h1, .top-vapes h1{
+        font-size: 32pt;
+    }
+    .hardware-content{
+        max-width: 70%;
+    }
+    nav{
+        position: fixed;
+        background-color: var(--color-primary);
+        border-radius: 20px;
+    }
+    
+    nav .nav-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    
+    .nav-wrapper .open-sidebar{
+        display: none;
+    }
+    
+    .nav-wrapper .close-sidebar{
+        display: none;
+    }
+    
+    .nav-wrapper .buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo-bar{
+        width: 300px;
+        height: 50px;
+        position: relative;
+        object-fit: cover;
+        background-size: 90%;
+        background-repeat: no-repeat;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media(max-width: 1127px){ /*Mobile View*/
+    .splash{
+        background-size: 200%;
+    }
+    .top-hardware h1, .top-vapes h1{
+        font-size: 16pt;
+    }
+    .popup-content .cont{
+        font-size: 12pt;
+    }
+    .hardware-content{
+        width: 86%;
+    }
+    nav{
+        display: flex;
+        flex-direction: flex-end;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+    }
+    
+    nav .nav-wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav-wrapper .buttons{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        z-index: 8;
+        text-align: center;
+    }
+    .nav-wrapper .buttons a{
+        animation: fade-in 320ms 0.3s forwards;
+        opacity: 0;
+    }
+    .nav-wrapper .open-sidebar{
+        position: relative;
+        padding: 0 20px;
+    }
+    .nav-wrapper .close-sidebar{
+        position: relative;
+        z-index: 9;
+        display: inline-block;
+    }
+    .logo-bar{
+        height: 50px;
+        object-fit: cover;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .nav-out{
+        position: fixed;
+        z-index: 7;
+        display: none;
+        background-color: black;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: 320ms ease-in-out;
+    }
+    #sidebar-active:checked ~ .buttons{
+        display: flex;
+        animation: nav-open 320ms ease-in-out forwards;
+        position: relative;
+    }
+    #sidebar-active:checked ~ .nav-out{
+        display: flex;
+        animation: fade-in-40 320ms forwards;
+    }
+}
