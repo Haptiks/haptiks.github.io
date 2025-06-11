@@ -48,6 +48,7 @@ cover div::after{
         top: 100px;
         width: 100vw;
         z-index: -1;
+        overflow-x: hidden;
 }
 
 .haptiks-body .flex-cont{
