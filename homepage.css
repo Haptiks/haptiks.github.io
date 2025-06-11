@@ -457,4 +457,23 @@ cover div::after{
     text-align: center;
     gap: 20px;
 }
+.my-slider-progress {
+    background: #ccc;
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+    height: 6px;
+    border-radius: 8px;
+    margin-top: 24px;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .my-slider-progress-bar {
+    background: rgb(47, 255, 168);
+    height: 6px;
+    width: 0;
+    border-radius: 6px;
+    transition: width 400ms ease;
+  }
 }

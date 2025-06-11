@@ -70,18 +70,18 @@
         -->
             <div class="not-carousel-1">
                 <section id="how-it-works">
-            <h1 style="font-size: 24pt; color: white; font-family: Poppins; margin-top: 20px;">How to maximize search potential for your business</h1>
+            <h1 style="font-size: 24pt; color: white; font-family: Poppins; margin-top: 20px;">How to get the most out of Haptiks</h1>
             <div class="hiw-flex">
                 <div class="content-card">
                     <div class="content-text">
-                        <h3>All popular search engines use a "keyword-based search"</h3>
-                        <p>If your business doesn't have enough keywords, others will take your place on the search ranking.</p>
+                        <h3>Since 2020, business has skyrocketed online.</h3>
+                        <p>Now most of the consumerbase for any product in online. If your business isn't, you're missing out.</p>
                     </div>
                     <img src="images/shops-near-me.png" alt="Your browser does not support this image" class="giffy">
                 </div>
                 <div class="content2">
                     <h3>
-                        We can help you take the next step in modernizing your business.
+                        We offer an affordable, compact, and responsive design. If you want to add more, just ask!
                     </h3>
                 </div>
             </div>
@@ -89,7 +89,7 @@
         <section id="why-us">
             <div class="content-card">
                     <div class="content1">
-                        <h1 class="cch1" style="margin: 0 30px;">We make it all simple, yet effective</h3>
+                        <h1 class="cch1" style="margin: 0 30px;">The "Magic" of Haptiks</h3>
                         <img src="images/flare-2.png">
                     </div>
                     <div class="content2">
@@ -104,7 +104,7 @@
                                 <div id="number-tag1">
                                     2
                                 </div>
-                                Your best sellers are listed on the main page
+                                Get exactly what your website needs, nothing less, nothing more unnecessary.
                             </div>
                             <div>
                                 <div id="number-tag1">
@@ -119,7 +119,7 @@
         <section id="done-for-you">
             <div class="content-card">
                 <div class="content1">
-                    <h1 class="cch2">
+                    <h1 class="cch2" style="font-family: Poppins">
                         Hosting -- One-Time Fee
                     </h1>
                 </div>
@@ -134,13 +134,13 @@
                         <div id="number-tag2">
                             2
                         </div>
-                        We show you the profit by providing comparable statistics
+                        You can download your website at any time, forever!
                     </div>
                     <div>
                         <div id="number-tag2">
                             3
                         </div>
-                        When you choose Haptiks to host, we do all of your maintenance for free!
+                        When you choose Haptiks to host, we do all of your maintenance for free.
                     </div>
                 </div>
             </div>
@@ -157,16 +157,16 @@
                             <div id="how-it-works">
                                     <div class="hiw-flex">
                                         <div class="content-card">
-                                            <h1 style="font-size: 24pt; margin-top: 10px;">How to maximize search potential for your business</h1>
+                                            <h1 style="font-size: 24pt; margin-top: 10px;">How to get the most out of Haptiks</h1>
                                             <div class="content-text">
-                                                <h3>All popular search engines use a "keyword-based search"</h3>
-                                                <p>If your business doesn't have enough keywords, others will take your place on the search ranking.</p>
+                                                <h3>Since 2020, business has skyrocketed online.</h3>
+                                                <p>Now most of the consumerbase for any product in online. If your business isn't, you're missing out.</p>
                                             </div>
                                             <img src="images/shops-near-me.png" alt="Your browser does not support this image" class="giffy">
                                         </div>
                                         <div class="content2">
                                             <h3>
-                                                We can help you take the next step in modernizing your business.
+                                                We offer an affordable, compact, and responsive design. If you want to add more, just ask!
                                             </h3>
                                         </div>
                                     </div>
@@ -176,7 +176,7 @@
                             <div id="why-us">
                                 <div class="content-card">
                                     <div class="content1">
-                                        <h1 class="cch1">We make it all simple, yet effective</h3>
+                                        <h1 class="cch1">The "Magic" of Haptiks</h3>
                                         <img src="images/flare-2.png">
                                     </div>
                                     <div class="content2">
@@ -191,7 +191,7 @@
                                                 <div id="number-tag1">
                                                     2
                                                 </div>
-                                                Your best sellers are listed on the main page
+                                                Get exactly what your website needs, nothing less, nothing more unnecessary.
                                             </div>
                                             <div>
                                                 <div id="number-tag1">
@@ -208,7 +208,7 @@
                             <div id="done-for-you">
                                 <div class="content-card">
                 <div class="content1">
-                    <h1 class="cch2" style="margin-top: 35px;">
+                    <h1 class="cch2" style="margin-top: 35px; font-family: Poppins">
                         Hosting -- One-Time Fee
                     </h1>
                 </div>
@@ -223,19 +223,23 @@
                         <div id="number-tag2">
                             2
                         </div>
-                        We show you the profit by providing comparable statistics
+                        You can download your website at any time, forever!
                     </div>
                     <div>
                         <div id="number-tag2">
                             3
                         </div>
-                        When you choose Haptiks to host, we do all of your maintenance for free!
+                        When you choose Haptiks to host, we do all of your maintenance for free.
                     </div>
                 </div>
             </div>
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div class="my-slider-progress">
+                    <div class="my-slider-progress-bar">
+                    </div>
                 </div>
             </section>
         </div>
@@ -248,28 +252,39 @@
 </body>
 <script>
     
-new Splide( '.splide', {
+var splide = new Splide( '.splide', {
   type       : 'loop',
   perPage    : 1,
   snap: true,
-} ).mount();
+  autoplay: true,
+} );
+
+var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
+
+splide.on( 'mounted move', function () {
+    var end  = splide.Components.Controller.getEnd() + 1;
+    var rate = Math.min( ( splide.index + 1 ) / end, 1 );
+    bar.style.width = String( 100 * rate ) + '%';
+  } );
+
+splide.mount();
 </script>
 </html>
 
 <!--
 <section id="how-it-works">
-            <h1 style="font-size: 24pt;">How to maximize search potential for your business</h1>
+            <h1 style="font-size: 24pt;">How to get the most out of Haptiks</h1>
             <div class="hiw-flex">
                 <div class="content-card">
                     <div class="content-text">
-                        <h3>All popular search engines use a "keyword-based search"</h3>
-                        <p>If your business doesn't have enough keywords, others will take your place on the search ranking.</p>
+                        <h3>Since 2020, business has skyrocketed online.</h3>
+                        <p>Now most of the consumerbase for any product in online. If your business isn't, you're missing out.</p>
                     </div>
                     <img src="images/shops-near-me.png" alt="Your browser does not support this image" class="giffy">
                 </div>
                 <div class="content2">
                     <h3>
-                        We can help you take the next step in modernizing your business.
+                        We offer an affordable, compact, and responsive design. If you want to add more, just ask!
                     </h3>
                 </div>
             </div>
@@ -277,7 +292,7 @@ new Splide( '.splide', {
         <section id="why-us">
             <div class="content-card">
                     <div class="content1">
-                        <h1 class="cch1">We make it all simple, yet effective</h3>
+                        <h1 class="cch1">The "Magic" of Haptiks</h3>
                         <img src="images/flare-2.png">
                     </div>
                     <div class="content2">
@@ -292,7 +307,7 @@ new Splide( '.splide', {
                                 <div id="number-tag1">
                                     2
                                 </div>
-                                Your best sellers are listed on the main page
+                                Get exactly what your website needs, nothing less, nothing more unnecessary.
                             </div>
                             <div>
                                 <div id="number-tag1">
@@ -322,13 +337,13 @@ new Splide( '.splide', {
                         <div id="number-tag2">
                             2
                         </div>
-                        We show you the profit by providing comparable statistics
+                        You can download your website at any time, forever!
                     </div>
                     <div>
                         <div id="number-tag2">
                             3
                         </div>
-                        When you choose Haptiks to host, we do all of your maintenance for free!
+                        When you choose Haptiks to host, we do all of your maintenance for free.
                     </div>
                 </div>
             </div>
