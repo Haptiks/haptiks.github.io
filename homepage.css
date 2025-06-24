@@ -538,6 +538,7 @@ nav{
 
 #content-card p{
     font-size: 14pt;
+    overflow-y: hidden;
 }
 
 .mkrueger-section{
@@ -751,6 +752,8 @@ nav{
         overflow-y: hidden;
         background-image: var(--background-color2);
         transition: 320ms ease-in-out;
+        z-index: -99;
+        position: absolute;
     }
     .pop-wrapper{
         display: flex;
