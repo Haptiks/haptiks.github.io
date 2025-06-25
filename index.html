@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="js/splide/splide-sea-green.min.css">
     <script type="text/javascript" src="JS/darkmode.js" defer></script>
     <script src="https://unpkg.com/scrollreveal@4"></script>
-    <script src="JS/splide/splide.min.js"></script>
     <script>
         window.sr = ScrollReveal();
-        import Splide from '@splidejs/splide';
     </script>
 </head>
 <nav>
@@ -45,7 +42,7 @@
     </div>
 </nav>
 <body class="not-darkmode">
-    <section class="splash-section" id="section">
+    <section class="splash-section reveal" id="section">
         
         <div class="splash-content">
             <img src="images/laptop.png" alt="">
@@ -91,7 +88,7 @@
         </div>
     </section>
     <section class="shape-intro" id="section"></section>
-    <section class="intro-section">
+    <section class="intro-section reveal">
         <div class="intro-wrapper-mobile">
             <h2>Custom Websites for Local Businesses</h2>
             <h1 style="max-width: 800px; margin: 0 auto;">Give your service the website it deserves</h1>
@@ -99,7 +96,7 @@
             <button id="get-started">Get Started</button>
         </div>
     </section>
-    <section class="about-section" id="section">
+    <section class="about-section reveal" id="section">
         <div class="flex-about">
             <div id="content-card">
                 <h1>Safe</h1>
@@ -153,7 +150,7 @@
             </div>
         </div>
     </section>
-    <section class="mkrueger-section" id="section">
+    <section class="mkrueger-section reveal" id="section">
         <div class="mkrueger-wrapper">
             <div class="pfp"></div>
             <div>
@@ -165,7 +162,7 @@
             </div>
         </div>
     </section>
-    <section class="plans" id="section">
+    <section class="plans reveal" id="section">
         <h1>Hosting Plans</h1>
         <div class="plans-wrapper">
             <div class="plans-block1" id="plans-block">
@@ -251,30 +248,30 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact reveal">
         <div class="watermark-cover"></div>
         <div class="contact-wrapper">
             <h1 style="text-align: center; font-size: 34pt; padding-bottom: 75px; background-image: var(--background-color2); color: var(--primary-color);">Ready to Start?</h1>
             <script type="text/javascript" src="https://form.jotform.com/jsform/251742772185058"></script>
         </div>
     </section>
-    <section class="footer">
+    <section class="footer reveal">
         <div class="footer-wrapper"></div>
     </section>
-</body>
-<script>
-	sr.reveal('#section', {
+    <script>
+	sr.reveal('.reveal', {
     origin: 'bottom',
-      distance: '20px',
+      distance: '30px',
       duration: 800,
       opacity: 0,
       scale: 1,
       easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
-      mobile: false,
-      reset: false,
-      viewFactor: 0.1,
+      mobile: true,
+      reset: true,
+      viewFactor: 0.15,
     });
 </script>
+</body>
 </html>
 
 <!--

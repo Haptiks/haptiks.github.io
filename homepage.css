@@ -39,6 +39,11 @@ html{
     color: var(--primary-color);
 }
 
+body{
+    overflow-y: hidden;
+    background-image: var(--background-color2);
+}
+
 h2{
     color: var(--primary-color);
 }
@@ -493,11 +498,11 @@ nav{
     margin: 20px;
     padding: 20px;
     background-image: var(--background-color2);
+    overflow-y: hidden;
 }
 
 #content-card{
     display: flex;
-    height: 400px;
     background-image: var(--flex-content-grad);
     border-radius: 20px;
     overflow-y: hidden;
@@ -527,7 +532,7 @@ nav{
 #content-card:hover::after{
     content: '';
     position: absolute;
-    height: 450px;
+    height: 400px;
     translate: -10% -5%;
     border-radius: 20px;
     border: 2px solid white;
