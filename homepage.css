@@ -597,8 +597,9 @@ nav{
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 20px;
     overflow-y: hidden;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
 }
 
 .flex-1{
@@ -810,7 +811,6 @@ nav{
     #plans-block{
         width: 90%;
         margin: 0 auto;
-        height: 700px;
     }
 }
 
@@ -1002,6 +1002,5 @@ nav{
     }
     #plans-block{
         width: 400px;
-        height: 900px;
     }
 }
