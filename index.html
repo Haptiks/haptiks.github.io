@@ -12,13 +12,13 @@
     </script>
 </head>
 <nav>
-    <div id="nav-pop" data-popover popover>
+    <div id="nav-pop" data-popover popover="auto">
         <div class="pop-wrapper">
-            <a href="#direct-home" class="navb1">Home</a>
-            <a href="#direct-whatwedo" class="navb2">Why Us</a>
-            <a href="#direct-about" class="navb2">About</a>
-            <a href="#direct-services" class="navb2">Services</a>
-            <a href="#direct-contact" class="navb3">Contact</a>
+            <a href="#direct-home">Home</a>
+            <a href="#direct-whatwedo">Why Us</a>
+            <a href="#direct-about">About</a>
+            <a href="#direct-services">Services</a>
+            <a href="#direct-contact">Contact</a>
         </div>
     </div>
     <div class="nav-wrapper">
@@ -97,10 +97,10 @@
             <h2>Custom Websites for Local Businesses</h2>
             <h1 style="max-width: 800px; margin: 0 auto;">Give your service the website it deserves</h1>
             <p style="font-size: 16pt; margin: 30px 0;">Since 2020, business has skyrocketed online.</p>
-            <button id="get-started">Get Started</button>
+            <button class="btn" id="direct-whatwedo">Get Started</button>
         </div>
     </section>
-    <section class="about-section reveal" id="direct-whatwedo">
+    <section class="about-section reveal">
         <div class="flex-about">
             <div id="content-card">
                 <h1>Safe</h1>
@@ -252,9 +252,9 @@
             </div>
         </div>
     </section>
-    <section class="contact reveal" id="direct-contact">
+    <section class="contact reveal">
         <div class="watermark-cover"></div>
-        <div class="contact-wrapper">
+        <div class="contact-wrapper" id="direct-contact">
             <h1 style="text-align: center; font-size: 34pt; padding-bottom: 75px; background-image: var(--background-color2); color: var(--primary-color);">Ready to Start?</h1>
             <script type="text/javascript" src="https://form.jotform.com/jsform/251742772185058"></script>
         </div>
@@ -265,10 +265,10 @@
     <script>
 	sr.reveal('.reveal', {
     origin: 'bottom',
-      distance: '15px',
+      distance: '5px',
       duration: 800,
       opacity: 0,
-      scale: 1,
+      scale: 0.99,
       easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
       mobile: true,
       reset: true,
